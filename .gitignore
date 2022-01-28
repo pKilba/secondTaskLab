@@ -1,0 +1,4 @@
+# Project exclude paths
+/entity/target/
+/logic/target/
+/out/
