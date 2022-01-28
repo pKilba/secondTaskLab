@@ -94,12 +94,6 @@ public class TagServiceTest {
         assertThrows(NotValidEntityException.class, () -> tagService.create(new Tag()));
     }
 
-//    @Test
-//    public void testFindById_ShouldFindCertificate() {
-//        when(tagDao.findById(anyLong())).thenReturn(Optional.empty());
-//        verify(tagDao).findById(anyLong());
-//    }
-
     @Test
     public void testFindByIdShouldThrowsNotFoundEntityExceptionWhenNotFound() {
         when(tagDao.findById(anyLong())).thenReturn(Optional.empty());

@@ -75,12 +75,6 @@ public class CertificateServiceTest {
         verify(certificateDao).create(CERTIFICATE);
     }
 
-//    @Test
-//    public void testFindByName_ShouldGetCertificate(){
-//        certificateService.findByName("test");
-//        verify(certificateDao).findByName("test");
-//    }
-
     @Test
     public void testCreateShouldThrowsNotValidTagExceptionWhenTagNotCorrect() {
         when(certificateValidator.isValid(any())).thenReturn(false);

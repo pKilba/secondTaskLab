@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 
-@PropertySource("classpath:application-production.properties")
+@PropertySource("classpath:application-dev.properties")
 @Profile("dev")
 @Component
 public class DevDatasourceConfig implements DatasourceConfig {
