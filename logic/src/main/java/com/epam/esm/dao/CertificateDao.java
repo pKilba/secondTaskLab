@@ -34,6 +34,7 @@ public class CertificateDao {
     private static final String SQL_UPDATE_CERTIFICATE_PART_QUERY =
             "UPDATE certificates SET last_update_date=NOW()";
 
+
     private final JdbcTemplate jdbcTemplate;
 
     @Autowired

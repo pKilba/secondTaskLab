@@ -1,6 +1,5 @@
 package com.epam.esm;
 
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +14,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 @ComponentScan("com.epam.esm")
 public class TestJdbcConfig {
     private static final String SQL_SETUP = "classpath:databaseSetup.sql";
-    //    private static final String SQL_INIT = "classpath:databaseInit.sql";
 
     @Bean
     public EmbeddedDatabase embeddedDatabase() {
@@ -26,7 +24,6 @@ public class TestJdbcConfig {
                 .setScriptEncoding("UTF-8")
                 .ignoreFailedDrops(true)
                 .addScript(SQL_SETUP)
-      //          .addScript(SQL_INIT)
                 .build();
     }
 

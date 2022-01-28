@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 
 @PropertySource("classpath:application-production.properties")
-@Profile("dev")
+//@Profile("dev")
 @Component
 public class DevDatasourceConfig implements DatasourceConfig {
     @Value("${dataSource.db.driverClassName}")
