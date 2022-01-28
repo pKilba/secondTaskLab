@@ -11,7 +11,7 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.transaction.PlatformTransactionManager;
 
 @Configuration
-@ComponentScan("com.epam.esm")
+@ComponentScan("com.epam.esm.dao")
 public class TestJdbcConfig {
     private static final String SQL_SETUP = "classpath:databaseSetup.sql";
 

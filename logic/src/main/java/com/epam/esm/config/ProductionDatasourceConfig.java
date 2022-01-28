@@ -6,7 +6,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-//@Profile("prod")
+@Profile("prod")
 @PropertySource("classpath:application-production.properties")
 public class ProductionDatasourceConfig implements DatasourceConfig {
     @Value("${dataSource.db.driverClassName}")
