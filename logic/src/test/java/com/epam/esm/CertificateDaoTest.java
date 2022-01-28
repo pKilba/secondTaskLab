@@ -1,4 +1,9 @@
-package com.epam.esm;
+
+
+
+/*
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;package com.epam.esm;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -22,8 +27,6 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.transaction.annotation.Transactional;
@@ -45,12 +48,13 @@ import static org.junit.jupiter.api.Assertions.*;
 @Transactional
 public class CertificateDaoTest {
 
- //   @Autowired
-   // public CertificateDaoTest(CertificateDao giftCertificateDaoImpl,
-       //                               GiftCertificateHasTagDao giftCertificateHasTagDao) {
-     //   this.giftCertificateDao = giftCertificateDaoImpl;
-        //this.giftCertificateHasTagDao = giftCertificateHasTagDao;
-   // }
+    //   @Autowired
+    // public CertificateDaoTest(CertificateDao giftCertificateDaoImpl,
+    //                               GiftCertificateHasTagDao giftCertificateHasTagDao) {
+    //   this.giftCertificateDao = giftCertificateDaoImpl;
+    //this.giftCertificateHasTagDao = giftCertificateHasTagDao;
+    // }
 }
+*/
 
 
