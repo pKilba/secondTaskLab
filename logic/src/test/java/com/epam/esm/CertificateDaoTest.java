@@ -2,6 +2,7 @@ package com.epam.esm;
 
 
 import com.epam.esm.dao.CertificateDao;
+import com.epam.esm.dto.CertificateDto;
 import com.epam.esm.model.Certificate;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -13,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.util.HashSet;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -62,6 +64,15 @@ public class CertificateDaoTest {
                 FIRST_CERTIFICATE.getName());
         assertEquals(FIRST_CERTIFICATE.getName(), giftCertificate.get().getName());
     }
+
+//    @Test
+//    public void testUpdateByIdShouldUpdate() {
+//        FIRST_CERTIFICATE.setName("newTest");
+//        certificateDao.updateCertificateById(
+//                1,new CertificateDto(FIRST_CERTIFICATE,new HashSet<>()));
+//        assertEquals(FIRST_CERTIFICATE.getName(), "newTest");
+//    }
+
 
 
     @Test

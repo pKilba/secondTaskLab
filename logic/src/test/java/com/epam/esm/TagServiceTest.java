@@ -46,7 +46,7 @@ public class TagServiceTest {
 
 
     @Test
-    public void testFindAll_ShouldFindAll() {
+    public void testFindAllShouldFindAll() {
         tagService.findAll();
         verify(tagDao).findAll();
     }
@@ -62,7 +62,6 @@ public class TagServiceTest {
     @Test
     public void testCreateShouldThrowsInvalidEntityExceptionWhenInvalid() {
         when(tagValidator.isValid(any())).thenReturn(false);
-       //todo
         assertThrows(Exception.class, () -> tagService.create(TAG));
     }
 
@@ -74,7 +73,7 @@ public class TagServiceTest {
     }
 
     @Test
-    public void testFindById_ShouldGetWhenFound() {
+    public void testFindByIdShouldGetWhenFound() {
         when(tagDao.findById(anyLong())).thenReturn(Optional.of(TAG));
         tagService.findById(1);
         verify(tagDao).findById(1);
@@ -82,7 +81,7 @@ public class TagServiceTest {
 
 
     @Test
-    public void testDeleteById_ShouldDeletedWhenFound() {
+    public void testDeleteByIdShouldDeletedWhenFound() {
         when(tagDao.findById(anyLong())).thenReturn(Optional.of(TAG));
         tagService.deleteById(1);
         verify(tagDao).deleteById(1);
@@ -90,7 +89,6 @@ public class TagServiceTest {
     @Test
     public void testCreateShouldThrowsNotValidTagExceptionWhenTagNotCorrect() {
         when(tagValidator.isValid(any())).thenReturn(false);
-        //todo
         assertThrows(NotValidEntityException.class, () -> tagService.create(new Tag()));
     }
 

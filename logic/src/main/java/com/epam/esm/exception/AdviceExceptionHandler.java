@@ -12,14 +12,14 @@ public class AdviceExceptionHandler {
 
     @ExceptionHandler(DuplicateEntityException.class)
     public ResponseEntity<ExceptionEntity> handleDuplicateEntityException(DuplicateEntityException e) {
-        return new ResponseEntity(new ExceptionEntity(HttpStatus.CONFLICT.toString(), e.getMessage(), 40401), HttpStatus.CONFLICT);
+        return new ResponseEntity(new ExceptionEntity(HttpStatus.CONFLICT.toString(), e.getMessage(), 40901), HttpStatus.CONFLICT);
     }
 
     @ExceptionHandler(NotValidEntityException.class)
     public ResponseEntity<ExceptionEntity> handleNotValidEntityException(NotValidEntityException e) {
 
 
-        return new ResponseEntity<>(new ExceptionEntity(HttpStatus.CONFLICT.toString(), e.getMessage(), 40401), HttpStatus.CONFLICT);
+        return new ResponseEntity<>(new ExceptionEntity(HttpStatus.CONFLICT.toString(), e.getMessage(), 40000), HttpStatus.CONFLICT);
 
     }
 

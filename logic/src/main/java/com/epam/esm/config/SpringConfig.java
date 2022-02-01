@@ -29,11 +29,5 @@ public class SpringConfig implements WebMvcConfigurer {
     }
 
 
-    @Bean
-    public ResourceBundleMessageSource getResourceBundleMessageSource() {
-        ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-        messageSource.addBasenames("/errorMessage");
-        messageSource.setDefaultEncoding("UTF-8");
-        return messageSource;
-    }
+
 }

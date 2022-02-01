@@ -83,15 +83,15 @@ public class CertificateDao {
             values.add(certificate.getName());
         }
         if (!pastCertificate.getDescription().equals(certificate.getDescription()) && certificate.getDescription() != null) {
-            s += ",descriptor = " + certificate.getDescription();
+            s += ",description = ? ";
             values.add(certificate.getDescription());
         }
         if (!pastCertificate.getPrice().equals(certificate.getPrice()) && certificate.getPrice() != null) {
-            s += ", price = " + certificate.getPrice();
+            s += ", price = ?" + certificate.getPrice();
             values.add(certificate.getPrice());
         }
         if (!(certificate.getDuration() == pastCertificate.getDuration()) && certificate.getDuration() != 0) {
-            s += ", duration = " + certificate.getDuration();
+            s += ", duration = ? " + certificate.getDuration();
             values.add(certificate.getDuration());
         }
         s += " WHERE id = ?";

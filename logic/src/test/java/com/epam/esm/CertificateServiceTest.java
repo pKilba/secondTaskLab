@@ -61,13 +61,13 @@ public class CertificateServiceTest {
 
 
     @Test
-    public void testFindAll_ShouldGetAll() {
+    public void testFindAllShouldGetAll() {
         certificateService.findAll();
         verify(certificateDao).findAll();
     }
 
     @Test
-    public void testCreate_ShouldCreateWhenNotExistAndValid() {
+    public void testCreateShouldCreateWhenNotExistAndValid() {
         when(certificateValidator.isValid(any())).thenReturn(true);
         when(tagValidator.isValid(any())).thenReturn(true);
         when(certificateDao.findByName(anyString())).thenReturn(Optional.empty());
@@ -78,26 +78,25 @@ public class CertificateServiceTest {
     @Test
     public void testCreateShouldThrowsNotValidTagExceptionWhenTagNotCorrect() {
         when(certificateValidator.isValid(any())).thenReturn(false);
-        //todo
         assertThrows(Exception.class, () -> certificateService.create(new CertificateDto()));
     }
 
     @Test
-    public void testFindById_ShouldGetWhenFound() {
+    public void testFindByIdShouldGetWhenFound() {
         when(certificateDao.findById(anyLong())).thenReturn(Optional.of(CERTIFICATE));
         certificateService.findById(1);
         verify(certificateDao).findById(1);
     }
 
     @Test
-    public void testFindByName_ShouldGetWhenFound() {
+    public void testFindByNameShouldGetWhenFound() {
         when(certificateDao.findByName(anyString())).thenReturn(Optional.of(CERTIFICATE));
         certificateService.findByName("TEST");
         verify(certificateDao).findByName("TEST");
     }
 
     @Test
-    public void testDeleteById_ShouldDeletedWhenFound() {
+    public void testDeleteByIdShouldDeletedWhenFound() {
         when(certificateDao.findById(anyLong())).thenReturn(Optional.of(CERTIFICATE));
         certificateService.deleteById(1);
         verify(certificateDao).deleteById(1);
@@ -117,7 +116,7 @@ public class CertificateServiceTest {
     }
 
     @Test
-    public void testUpdateByIds_ShouldUpdateWhenFound() {
+    public void testUpdateByIdsShouldUpdateWhenFound() {
         when(certificateDao.findById(anyLong())).thenReturn(Optional.of(CERTIFICATE));
         certificateService.updateById(1, CERTIFICATE_DTO);
         verify(certificateDao).updateCertificateById(anyInt(), any());
