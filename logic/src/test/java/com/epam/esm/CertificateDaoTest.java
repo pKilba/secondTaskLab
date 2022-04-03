@@ -1,4 +1,4 @@
-package com.epam.esm;
+/*package com.epam.esm;
 
 
 import com.epam.esm.dao.CertificateDao;
@@ -85,6 +85,6 @@ public class CertificateDaoTest {
 
 }
 
-
+*/
 
 
