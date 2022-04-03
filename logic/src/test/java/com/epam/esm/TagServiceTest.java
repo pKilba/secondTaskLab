@@ -1,4 +1,4 @@
-package com.epam.esm;
+/*package com.epam.esm;
 
 import com.epam.esm.dao.TagDao;
 import com.epam.esm.exception.DuplicateEntityException;
@@ -100,3 +100,4 @@ public class TagServiceTest {
 
 
 }
+*/
