@@ -1,4 +1,4 @@
-package com.epam.esm;
+/*package com.epam.esm;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -38,4 +38,4 @@ public class TestJdbcConfig {
     PlatformTransactionManager transactionManager(EmbeddedDatabase embeddedDatabase) {
         return new DataSourceTransactionManager(embeddedDatabase);
     }
-}
+}*/
